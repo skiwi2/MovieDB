@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class MovieDB extends Application {
     @Override
     public void start(final Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MovieDB.fxml"));
+        Parent root = FXMLLoader.load(MovieDBController.class.getResource("MovieDB.fxml"));
         
         Scene scene = new Scene(root, 800, 600);
         
