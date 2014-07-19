@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedb.settings.SettingsController">
+    <stylesheets>
+        <URL value="@Settings.css" />
+    </stylesheets>
+   <children>
+      <Accordion>
+        <panes>
+          <TitledPane fx:id="generalTitledPane" animated="false" prefWidth="160.0" text="%settings.menu.general">
+               <content>
+                  <VBox>
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleMenuGeneralGeneralAction" text="%settings.menu.general.general">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Button>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                     <padding>
+                         <Insets bottom="0" left="0" right="0" top="0" />
+                     </padding>
+                  </VBox>
+               </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <AnchorPane />
+   </children>
+</HBox>
