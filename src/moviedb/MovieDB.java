@@ -2,6 +2,8 @@
 package moviedb;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +17,8 @@ import javafx.stage.Stage;
 public class MovieDB extends Application {
     @Override
     public void start(final Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(MovieDBController.class.getResource("MovieDB.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MovieDBController.class.getResource("MovieDB.fxml"), ResourceBundle.getBundle("bundles/bundle", new Locale("en")));
+        Parent root = fxmlLoader.load();
         
         Scene scene = new Scene(root, 800, 600);
         

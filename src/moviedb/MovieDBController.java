@@ -25,7 +25,7 @@ public class MovieDBController implements Initializable {
     }
 
     @FXML
-    private void handleOptionsPreferencesButtonAction(final ActionEvent actionEvent) {
+    private void handleOptionsSettingsButtonAction(final ActionEvent actionEvent) {
         
     }
 }
