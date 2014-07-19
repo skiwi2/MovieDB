@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -17,6 +18,9 @@ import javafx.scene.control.TitledPane;
 public class SettingsController implements Initializable {
     @FXML
     private TitledPane generalTitledPane;
+    
+    @FXML
+    private AnchorPane contentPane;
     
     @Override
     public void initialize(final URL url, final ResourceBundle resourceBundle) {
