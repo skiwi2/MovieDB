@@ -1,6 +1,7 @@
 
 package com.skiwi.moviedb;
 
+import com.skiwi.moviedb.settings.SettingsController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
@@ -14,7 +15,6 @@ import javafx.scene.Parent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import com.skiwi.moviedb.settings.SettingsController;
 
 /**
  * FXML Controller class
@@ -37,7 +37,8 @@ public class MovieDBController implements Initializable {
 
     @FXML
     private void handleOptionsSettingsButtonAction(final ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SettingsController.class.getResource("SettingsStage.fxml"), ResourceBundle.getBundle("bundles/bundle", new Locale("en")));
+        FXMLLoader fxmlLoader = new FXMLLoader(SettingsController.class.getResource("SettingsStage.fxml"), 
+            ResourceBundle.getBundle("com/skiwi/bundles/bundle", new Locale("en")));
         Stage stage = fxmlLoader.load();
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(root.getScene().getWindow());

@@ -1,9 +1,9 @@
 
 package com.skiwi.integration;
 
+import com.skiwi.moviedb.MovieDB;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
-import com.skiwi.moviedb.MovieDB;
 import org.junit.Test;
 
 /**

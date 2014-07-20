@@ -18,12 +18,13 @@ import javafx.stage.Stage;
 public class MovieDB extends Application {
     @Override
     public void start(final Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MovieDBController.class.getResource("MovieDB.fxml"), ResourceBundle.getBundle("bundles/bundle", new Locale("en")));
+        FXMLLoader fxmlLoader = new FXMLLoader(MovieDBController.class.getResource("MovieDB.fxml"), 
+            ResourceBundle.getBundle("com/skiwi/bundles/bundle", new Locale("en")));
         Parent root = fxmlLoader.load();
         
         Scene scene = new Scene(root, 1024, 768);
         
-        StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource("/css/MovieDB.css").getPath());
+        StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource("/com/skiwi/css/MovieDB.css").getPath());
         
         primaryStage.setTitle("MovieDB");
         primaryStage.setScene(scene);
