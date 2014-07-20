@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,6 +22,9 @@ import moviedb.settings.SettingsController;
  * @author Frank van Heeswijk
  */
 public class MovieDBController implements Initializable {
+    @FXML
+    private Parent root;
+    
     @Override
     public void initialize(final URL url, final ResourceBundle resourceBundle) {
         
@@ -36,9 +40,8 @@ public class MovieDBController implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(SettingsController.class.getResource("SettingsStage.fxml"), ResourceBundle.getBundle("bundles/bundle", new Locale("en")));
         Stage stage = fxmlLoader.load();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.initOwner(MovieDB.getPrimaryStage());
+        stage.initOwner(root.getScene().getWindow());
         stage.initStyle(StageStyle.DECORATED);
-        
         stage.show();
     }
 }

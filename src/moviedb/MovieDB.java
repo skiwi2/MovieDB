@@ -16,12 +16,8 @@ import javafx.stage.Stage;
  * @author Frank van Heeswijk
  */
 public class MovieDB extends Application {
-    private static Stage PRIMARY_STAGE;
-    
     @Override
     public void start(final Stage primaryStage) throws IOException {
-        PRIMARY_STAGE = primaryStage;
-        
         FXMLLoader fxmlLoader = new FXMLLoader(MovieDBController.class.getResource("MovieDB.fxml"), ResourceBundle.getBundle("bundles/bundle", new Locale("en")));
         Parent root = fxmlLoader.load();
         
@@ -34,13 +30,6 @@ public class MovieDB extends Application {
         primaryStage.show();
     }
     
-    public static Stage getPrimaryStage() {
-        if (PRIMARY_STAGE == null) {
-            throw new IllegalStateException("no primary stage has been set");
-        }
-        return PRIMARY_STAGE;
-    }
-
     public static void main(String[] args) {
         launch(args);
     }
