@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -31,6 +32,9 @@
                      </padding>
                   </VBox>
                </content>
+               <font>
+                  <Font size="15.0" />
+               </font>
           </TitledPane>
         </panes>
       </Accordion>
