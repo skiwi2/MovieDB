@@ -1,5 +1,5 @@
 
-package integration.menubar;
+package com.skiwi.integration.menubar;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import moviedb.MovieDBController;
+import com.skiwi.moviedb.MovieDBController;
 import org.junit.Ignore;
 import org.loadui.testfx.GuiTest;
 

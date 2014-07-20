@@ -1,5 +1,5 @@
 
-package moviedb;
+package com.skiwi.moviedb;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,7 +14,7 @@ import javafx.scene.Parent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import moviedb.settings.SettingsController;
+import com.skiwi.moviedb.settings.SettingsController;
 
 /**
  * FXML Controller class

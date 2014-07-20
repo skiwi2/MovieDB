@@ -1,5 +1,5 @@
 
-package moviedb;
+package com.skiwi.moviedb;
 
 import com.sun.javafx.css.StyleManager;
 import java.io.IOException;

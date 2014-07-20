@@ -1,5 +1,5 @@
 
-package moviedb.settings;
+package com.skiwi.moviedb.settings;
 
 import java.net.URL;
 import java.util.ResourceBundle;

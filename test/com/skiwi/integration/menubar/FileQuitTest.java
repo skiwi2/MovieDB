@@ -1,5 +1,5 @@
 
-package integration.menubar;
+package com.skiwi.integration.menubar;
 
 import org.junit.Test;
 
