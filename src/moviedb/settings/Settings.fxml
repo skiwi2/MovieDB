@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.stage.*?>
 
-<HBox fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedb.settings.SettingsController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedb.settings.SettingsController">
     <stylesheets>
         <URL value="@Settings.css" />
     </stylesheets>
@@ -38,6 +38,6 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <AnchorPane />
+      <AnchorPane fx:id="contentPane" />
    </children>
 </HBox>
