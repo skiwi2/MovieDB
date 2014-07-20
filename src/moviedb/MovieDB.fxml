@@ -10,12 +10,12 @@
    <children>
       <MenuBar>
         <menus>
-          <Menu mnemonicParsing="false" text="%menu.file">
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="%menu.file">
             <items>
               <MenuItem fx:id="fileQuitButton" mnemonicParsing="false" onAction="#handleFileQuitButtonAction" text="%menu.file.quit" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="%menu.options">
+            <Menu fx:id="optionsMenu" mnemonicParsing="false" text="%menu.options">
               <items>
                 <MenuItem fx:id="optionsSettingsButton" mnemonicParsing="false" onAction="#handleOptionsSettingsButtonAction" text="%menu.options.settings" />
               </items>
