@@ -2,8 +2,13 @@
 package com.skiwi.integration;
 
 import com.skiwi.moviedb.MovieDB;
-import java.util.Optional;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
@@ -13,32 +18,16 @@ import org.junit.Test;
 public class LaunchTest {
     @Test(timeout = 5000)
     public void testLaunch() throws Throwable {
-        CachingExceptionThread thread = new CachingExceptionThread(() -> MovieDB.main(new String[0]));
-        thread.start();
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        Future<?> future = service.submit(() -> MovieDB.main(new String[0]));
         try {
-            TimeUnit.SECONDS.sleep(3);
+            future.get(3, TimeUnit.SECONDS);
         } catch (InterruptedException ex) {
-            throw new RuntimeException("sleep interrupted", ex);
-        }
-        thread.interrupt();
-        if (thread.getException().isPresent()) {
-            throw thread.getException().get();
-        }
-    }
-    
-    private static class CachingExceptionThread extends Thread {
-        private Optional<Throwable> exception = Optional.empty();
-        
-        {
-            setUncaughtExceptionHandler((thread, ex) -> exception = Optional.of(ex));
-        }
-        
-        private CachingExceptionThread(final Runnable runnable) {
-            super(runnable);
-        }
-        
-        public Optional<Throwable> getException() {
-            return exception;
+            Thread.currentThread().interrupt();
+        } catch (TimeoutException ex) {
+            assertTrue(true);
+        } catch (ExecutionException ex) {
+            throw ex.getCause();
         }
     }
 }
