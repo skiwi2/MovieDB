@@ -39,7 +39,8 @@
                 <configuration>
                     <reuseForks>false</reuseForks>
                     <additionalClasspathElements>
-                        <additionalClasspathElement>${java.home}/jre/lib/ext/jfxrt.jar</additionalClasspathElement>
+                        <additionalClasspathElement>/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar</additionalClasspathElement>
+                        <!-- Rather use ${java.home} than hardcoding -->
                     </additionalClasspathElements>
                 </configuration>
             </plugin>
