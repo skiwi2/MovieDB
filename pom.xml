@@ -39,7 +39,7 @@
                 <configuration>
                     <reuseForks>false</reuseForks>
                     <additionalClasspathElements>
-                        <additionalClasspathElement>${java.home}\jre\lib\ext\jfxrt.jar</additionalClasspathElement>
+                        <additionalClasspathElement>${java.home}/jre/lib/ext/jfxrt.jar</additionalClasspathElement>
                     </additionalClasspathElements>
                 </configuration>
             </plugin>
