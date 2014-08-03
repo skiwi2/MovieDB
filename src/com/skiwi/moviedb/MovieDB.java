@@ -24,7 +24,7 @@ public class MovieDB extends Application {
         
         Scene scene = new Scene(root, 1024, 768);
         
-        StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource("/com/skiwi/css/MovieDB.css").getPath());
+        StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource("/com/skiwi/css/MovieDB.css").toString());
         
         primaryStage.setTitle("MovieDB");
         primaryStage.setScene(scene);
