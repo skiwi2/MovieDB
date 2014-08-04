@@ -23,4 +23,3 @@ after_success:
 env:
     global:
         - secure: "dnSI5Z9EL4SogFcTfczZY5LoYr4EgPNoNyozZdv3yv+PEMYKO1FNoEYgZmQIxkkyEjBOgBzQinfzHNnyOKlmq9jx/mrQsH9cOk4mg6sjlIhH5OEEvpEPq9WiE8wri84VKYXltztcjWSXelfsizTLMO9pnZ+BRyvHEcK0W9AgrJQ="
-        - JAVA_HOME=/usr/lib/jvm/java-8-oracle
